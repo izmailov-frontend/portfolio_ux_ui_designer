@@ -84,7 +84,7 @@ export default {
       <h1 class="h1 mb-8">{{ store.title }}</h1>
       <div class="flex gap-[106px] mb-9">
         <div class="flex-[0_1_50%]">
-          <h2 class="subtitle">{{ store.sectionViewProject.target.text }}</h2>
+          <h2 class="subtitle">{{ titles.viewProjectTitle }}</h2>
           <div class="mb-4">
             <div class="relative">
               <h3 class="font-unbounded text-[#EDF2F7] text-[24px] mb-2">
@@ -98,7 +98,7 @@ export default {
             </div>
 
             <p class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]">
-              {{ target }}
+              {{ store.sectionViewProject.target.text }}
             </p>
           </div>
           <div>
@@ -115,7 +115,7 @@ export default {
             <div class="flex gap-2">
               <ul>
                 <li
-                  v-for="task in taskProject"
+                  v-for="task in store.sectionViewProject.tasks.list"
                   :key="task.id"
                   class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]"
                 >
@@ -124,7 +124,7 @@ export default {
               </ul>
               <ul>
                 <li
-                  v-for="task in taskProject"
+                  v-for="task in store.sectionViewProject.tasks.list"
                   :key="task.id"
                   class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]"
                 >
@@ -135,7 +135,11 @@ export default {
           </div>
         </div>
         <div>
-          <img class="w-[100%]" :src="imgBackground" alt="Фото проекта" />
+          <img
+            class="w-[100%]"
+            :src="store.sectionViewProject.img"
+            alt="Фото проекта"
+          />
         </div>
       </div>
       <div class="mb-5">
@@ -157,7 +161,7 @@ export default {
           <ul class="mb-5">
             <li
               class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]"
-              v-for="item in textAnalise"
+              v-for="item in store.workProcess.list"
               :key="item.id"
             >
               {{ item.text }}
@@ -165,7 +169,10 @@ export default {
           </ul>
 
           <div class="flex gap-5">
-            <div v-for="item in imgWorkProcess" :key="'work-' + item.id">
+            <div
+              v-for="item in store.workProcess.image"
+              :key="'work-' + item.id"
+            >
               <button @click="toggleLightbox('work-' + item.id)">
                 <img :src="item.src" alt="" />
               </button>
@@ -187,7 +194,10 @@ export default {
             alt=""
           />
           <div class="flex gap-5">
-            <div v-for="item in imgAnalise" :key="'analise-' + item.id">
+            <div
+              v-for="item in store.competitiveAnalize.image"
+              :key="'analise-' + item.id"
+            >
               <button @click="toggleLightbox('analise-' + item.id)">
                 <img :src="item.src" alt="" />
               </button>
@@ -206,7 +216,11 @@ export default {
             <div>
               <div class="mb-10">
                 <button @click="toggleLightbox('cjm')">
-                  <img class="rounded-[20px]" :src="cjmImage" alt="" />
+                  <img
+                    class="rounded-[20px]"
+                    :src="store.sectionCJM.image"
+                    alt=""
+                  />
                 </button>
                 <light-box :toggler="toggler.cjm" :sources="[cjmImage]" />
               </div>
@@ -214,7 +228,7 @@ export default {
                 <p
                   class="text-[#CBD5E0] font-[Mulish] text-18px font-[400] relative"
                 >
-                  {{ cjmText }}
+                  {{ store.sectionCJM.text }}
                 </p>
                 <img
                   class="absolute top-[52px] left-[3.6rem]"
@@ -237,7 +251,7 @@ export default {
             </div>
             <div>
               <button @click="toggleLightbox('userFlowImage')">
-                <img :src="userFlowImage" alt="" />
+                <img :src="store.sectionUserFlow.image" alt="" />
               </button>
               <light-box
                 :toggler="toggler.userFlowImage"
@@ -259,7 +273,7 @@ export default {
           </div>
           <div>
             <button @click="toggleLightbox('sectionDesign')">
-              <img :src="sectionDesign" alt="" />
+              <img :src="store.sectionDesign.image" alt="" />
             </button>
             <light-box
               :toggler="toggler.sectionDesign"
@@ -273,7 +287,7 @@ export default {
           </h2>
           <div class="flex gap-5">
             <div class="flex-[0_1_50%]">
-              <img :src="sectionResultImg" alt="" />
+              <img :src="store.sectionResult.image" alt="" />
             </div>
             <div class="text flex-[0_1_50%]">
               <div class="relative">
@@ -291,7 +305,7 @@ export default {
                 <ul>
                   <li
                     class="text-[#CBD5E0] font-[Mulish] text-18px font-[400] flex gap-2"
-                    v-for="item in sectionResultList"
+                    v-for="item in store.sectionResult.list"
                     :key="item.id"
                   >
                     <span>{{ item.id + "." }}</span>
@@ -299,15 +313,6 @@ export default {
                     {{ item.text }}
                   </li>
                 </ul>
-                <!-- <ul>
-                <li
-                  class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]"
-                  v-for="item in sectionResultList"
-                  :key="item.id"
-                >
-                  {{ item.text }}
-                </li>
-              </ul> -->
               </div>
             </div>
           </div>

@@ -14,7 +14,9 @@ export default {
   <div id="app">
     <!-- <app-main-page></app-main-page> -->
     <app-header class="header px-[20px]"></app-header>
-    <app-mobile-cnc></app-mobile-cnc>
+    <div class="content">
+      <app-mobile-cnc></app-mobile-cnc>
+    </div>
     <app-footer></app-footer>
   </div>
 </template>
