@@ -1,0 +1,7 @@
+.h1 {
+	@apply text-5xl font-fw-500 font-unbounded text-colorH1 tracking-[2.88px]
+}
+
+h2{
+	@apply text-4xl font-fw-500 font-unbounded text-colorH1
+}

@@ -1,0 +1,12 @@
+.title{
+	@apply font-unbounded text-36px font-fw-500 text-linkNavDef
+}
+
+.subtitle{
+	@apply font-unbounded text-[24px] font-400 text-linkNavDef
+}
+
+.text-project{
+	@apply font-ff-bt text-[1.125rem] font-400 text-gray-300
+
+}

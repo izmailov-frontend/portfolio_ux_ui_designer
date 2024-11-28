@@ -1,0 +1,36 @@
+	.btn {
+		@apply rounded-br-20 px-6 py-2 font-ff-bt text-fz-18 font-fw-500 leading-7  text-gray flex items-center
+	}
+	.btn-hover  {
+		@apply bg-hover ;
+	}
+	.btn-default  {
+		@apply bg-default ;
+	}
+	.btn-active  {
+		@apply bg-active ;
+	}
+	.btn-state  {
+		@apply bg-state ;
+	}
+	
+	.btn-outline-primary  { 
+		@apply  bg-grayOutline text-hover border-hover border-2
+	}
+	.btn-outline-secondary { 
+		@apply bg-none text-hover border-hover border-2
+	}
+	.btn-outline-tertiary { 
+		@apply bg-grayOutline text-active border-active border-2
+	}
+	.btn-outline-disable { 
+		@apply bg-default  border-defaultOutline border-2 text-defaultOutline
+	}
+
+.btn-contacts{
+	@apply bg-none border-active text-active border-2 py-1 ;
+}
+
+.link-nav-active{
+	@apply text-linkNavActive
+}
