@@ -34,7 +34,7 @@ export default {
     const toggler = ref({
       usersAnalysisTitle: false,
       competitiveAnalysisTitle: false,
-      cjmTitle: false,
+      cjm: false,
       userFlow: false,
       designTitle: false,
       resultTitle: false,
@@ -222,7 +222,10 @@ export default {
                     alt=""
                   />
                 </button>
-                <light-box :toggler="toggler.cjm" :sources="[cjmImage]" />
+                <light-box
+                  :toggler="toggler.cjm"
+                  :sources="[store.sectionCJM.image]"
+                />
               </div>
               <div class="relative">
                 <p
@@ -255,7 +258,7 @@ export default {
               </button>
               <light-box
                 :toggler="toggler.userFlowImage"
-                :sources="[userFlowImage]"
+                :sources="[store.sectionUserFlow.image]"
               />
             </div>
           </div>
@@ -277,7 +280,7 @@ export default {
             </button>
             <light-box
               :toggler="toggler.sectionDesign"
-              :sources="[sectionDesign]"
+              :sources="[store.sectionDesign.image]"
             />
           </div>
         </div>

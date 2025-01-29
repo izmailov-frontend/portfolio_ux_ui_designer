@@ -10,7 +10,9 @@
           >
             {{ title }}
           </h2>
-          <p class="text-gray-300 font-ff-bt text-18px">{{ description }}</p>
+          <p class="text-gray-300 font-ff-bt text-18px">
+            {{ description }}
+          </p>
         </div>
         <router-link :to="link">
           <div class="btn-resume inline-block inline-flex">
