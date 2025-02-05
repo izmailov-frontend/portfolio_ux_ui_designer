@@ -1,8 +1,8 @@
 <template>
   <div class="appmainpage">
     <div class="content pt-3 box-border px-6">
-      <hr class="content-hr max-w-[1360px] bg-[#D9D9D9] h-1" />
-      <welcome-card class="max-w-[1130px] mb-28"></welcome-card>
+      <div class="content-hr max-w-[1360px]"></div>
+      <welcome-card class="max-w-[1130px] mb-38"></welcome-card>
       <app-skills class="skills max-w-[1130px]"></app-skills>
       <!-- Я добавляю в класс компонента класс margin-zero, если индекс итерируемого элемента равен последнему элементу -->
 
@@ -92,7 +92,7 @@ export default {
   }
 
   .content-hr {
-    margin: 0 auto 38px;
+    margin: 0 auto 44px;
   }
 }
 </style>

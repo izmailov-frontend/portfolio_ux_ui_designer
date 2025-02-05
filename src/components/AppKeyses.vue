@@ -1,6 +1,6 @@
 <template>
   <div class="appkeyses">
-    <div class="content max-w-[100%] flex p-8 gap-5">
+    <div class="content max-w-[100%] flex p-8 gap-5 mb-8">
       <!--  -->
       <div class="col flex-[0_1_50%] flex flex-col">
         <div class="text flex flex-col gap-3 mb-6">

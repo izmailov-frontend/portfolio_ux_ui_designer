@@ -2,7 +2,10 @@
   <div class="appheader">
     <header class="header flex items-end justify-between">
       <div class="logo w-widthlogo">
-        <img :src="linkLogo.src" alt="" />
+        <!-- Указываем по какой ссылке будем переходить -->
+        <RouterLink to="/">
+          <img :src="linkLogo.src" alt="" />
+        </RouterLink>
       </div>
       <div class="links"><app-header-link></app-header-link></div>
     </header>
@@ -32,5 +35,9 @@ export default {
 .header {
   max-width: 1360px;
   margin: 0 auto;
+}
+
+.logo {
+  cursor: pointer;
 }
 </style>

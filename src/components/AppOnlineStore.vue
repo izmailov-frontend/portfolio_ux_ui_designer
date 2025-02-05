@@ -1,6 +1,6 @@
 <script>
 import { ref } from "vue";
-import { appMobileStore } from "../assets/store/index.js";
+import { appMobileStore } from "../assets/store/onlineStore.js";
 import frame from "../assets/img/img-analize/Frame.svg";
 import longframe from "../assets/img/img-analize/longframe.svg";
 import outlineSolid from "../assets/img/img-analize/outlinesolid.svg";
@@ -74,12 +74,10 @@ export default {
   <div class="appmobilecnc max-w-[1130px] px-[20px]">
     <div>
       <div class="flex gap-2 pt-5">
-        <button class="flex items-center gap-x-2" @click="$router.back()">
-          <img :src="backIcon" alt="" />
-          <span class="text-[#CBD5E0] font-[Mulish] text-18px"
-            >Ко всем проектам</span
-          >
-        </button>
+        <img :src="backIcon" alt="" />
+        <span class="text-[#CBD5E0] font-[Mulish] text-18px"
+          >Ко всем проектам</span
+        >
       </div>
     </div>
     <div class="content pt-9">
@@ -115,16 +113,16 @@ export default {
               />
             </div>
             <div class="flex gap-2">
-              <ul>
+              <ul class="pl-6">
                 <li
                   v-for="task in store.sectionViewProject.tasks.list"
                   :key="task.id"
-                  class="text-[#CBD5E0] font-[Mulish] text-18px font-[400]"
+                  class="text-[#CBD5E0] font-[Mulish] text-18px font-[400] list-decimal"
                 >
-                  {{ task.id + "." }}
+                  {{ task.text }}
                 </li>
               </ul>
-              <ul>
+              <!-- <ul>
                 <li
                   v-for="task in store.sectionViewProject.tasks.list"
                   :key="task.id"
@@ -132,7 +130,7 @@ export default {
                 >
                   {{ task.text }}
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>

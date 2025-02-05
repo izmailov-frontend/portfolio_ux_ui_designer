@@ -4,18 +4,16 @@
 // import AppMainPage from "./components/AppMainPage.vue";
 import AppHeader from "./components/AppHeader.vue";
 import AppFooter from "./components/AppFooter.vue";
-import AppMobileCnc from "./components/AppMobileCnc.vue";
-
 export default {
-  components: { AppHeader, AppFooter, AppMobileCnc },
+  components: { AppHeader, AppFooter },
 };
 </script>
 <template>
   <div id="app">
     <!-- <app-main-page></app-main-page> -->
-    <app-header class="header px-[20px]"></app-header>
+    <app-header class="header px-[20px]"> </app-header>
     <div class="content">
-      <app-mobile-cnc></app-mobile-cnc>
+      <router-view></router-view>
     </div>
     <app-footer></app-footer>
   </div>
